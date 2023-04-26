@@ -2,7 +2,7 @@
 
 public static class GeneratePdf
 {
-    private static Stream GenerateStreamFromString(string? str)
+    public static Stream GenerateStreamFromString(string? str)
     {
         var stream = new MemoryStream();
         var writer = new StreamWriter(stream);
