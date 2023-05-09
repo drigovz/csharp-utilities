@@ -4,7 +4,7 @@ public class PdfUtilities
 {
     public byte[] ConvertPdFtoByteArray(Stream html)
     {
-        using MemoryStream memStream = new();
+        /*using MemoryStream memStream = new();
         WriterProperties wp = new();
         using (PdfWriter writer = new(memStream, wp))
         {
@@ -27,12 +27,13 @@ public class PdfUtilities
 
         var buffer = memStream.ToArray();
 
-        return buffer;
+        return buffer;*/
+        return null;
     }
 
     public string EncryptPdFwithPassword(byte[] bytes, string passwordUser, string passwordOwner)
     {
-        byte[] userPassword = Encoding.ASCII.GetBytes(passwordUser),
+        /*byte[] userPassword = Encoding.ASCII.GetBytes(passwordUser),
             ownerPassword = Encoding.ASCII.GetBytes(passwordOwner);
 
         PdfReader reader = new(new MemoryStream(bytes));
@@ -48,12 +49,13 @@ public class PdfUtilities
         doc.Close();
         var encryptedBase64 = Convert.ToBase64String(stream.ToArray());
 
-        return encryptedBase64;
+        return encryptedBase64;*/
+        return null;
     }
 
     public string ConvertPdFtoBase64String(byte[] bytes)
     {
-        PdfReader reader = new(new MemoryStream(bytes));
+        /*PdfReader reader = new(new MemoryStream(bytes));
         WriterProperties wp = new();
 
         using var stream = new MemoryStream();
@@ -62,6 +64,7 @@ public class PdfUtilities
         doc.Close();
         var encryptedBase64 = Convert.ToBase64String(stream.ToArray());
 
-        return encryptedBase64;
+        return encryptedBase64;*/
+        return null;
     }
 }

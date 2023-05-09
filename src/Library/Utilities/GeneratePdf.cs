@@ -4,12 +4,13 @@ public static class GeneratePdf
 {
     public static Stream GenerateStreamFromString(string? str)
     {
-        var stream = new MemoryStream();
+        /*var stream = new MemoryStream();
         var writer = new StreamWriter(stream);
         writer.Write(str);
         writer.Flush();
         stream.Position = 0;
-        return stream;
+        return stream;*/
+        return new MemoryStream(Encoding.UTF8.GetBytes(str ?? ""));
     }
 
     /// <summary> Generate PDF file with password from HTML String </summary>
