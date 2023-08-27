@@ -2,7 +2,7 @@
 
 namespace Library.Test.Extensions.Test;
 
-public abstract class EnumerableExtensionsTest
+public class EnumerableExtensionsTest
 {
     [Fact]
     [Trait("Enumerable", "CollectionIsNull")]
